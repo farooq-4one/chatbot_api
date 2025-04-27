@@ -1,4 +1,3 @@
-# frontend code is written below``
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -44,36 +43,3 @@ async def chat_with_agent(req: ChatRequest):
     )
 
     return {"response": result.final_output}
-
-
-# utils/api.ts
-# import axios from 'axios';
-# import { auth } from '@clerk/nextjs/server';
-
-# export async function sendMessage(message: string) {
-#   try {
-#     const { userId } = await auth(); // Always fetch userId
-#     if (!userId) {
-#       return { message: "Unauthorized", status: 401 };
-#     }
-
-#     const response = await axios.post('http://localhost:8000/chat', {
-#       message,
-#       userId,  // Always send this
-#     }, {
-#       headers: {
-#         'Content-Type': 'application/json',
-#       },
-#     });
-
-#     return response.data.response;
-
-#   } catch (error) {
-#     console.error('Error occurred:', error);
-#     if (axios.isAxiosError(error)) {
-#       return { message: "Failed to fetch response from the agent",
-#       status: 500 };
-#     }
-#     return { message: "An unexpected error occurred", status: 500 };
-#   }
-# }
