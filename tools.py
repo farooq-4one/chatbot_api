@@ -7,9 +7,9 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-API_BASE = "http://localhost:3000/api/f887dc57-d660-43d5-8fcf-afd6748cf9d9/billboards"
+API_BASE = "https://store-admin-farooq.vercel.app/api/f887dc57-d660-43d5-8fcf-afd6748cf9d9/billboards"
 
-post_url = "http://localhost:3000/api/f887dc57-d660-43d5-8fcf-afd6748cf9d9/billboards/external"
+post_url = "https://store-admin-farooq.vercel.app/api/f887dc57-d660-43d5-8fcf-afd6748cf9d9/billboards/external"
 
 
 @function_tool
